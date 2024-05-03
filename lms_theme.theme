@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * LMS Theme theme file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Theme\ThemeSettings;
+use Drupal\system\Form\ThemeSettingsForm;
+use Drupal\Core\Form;
+
+function lms_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state, $form_id = NULL) {
+
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $form['lms_theme_settings']['lms_short_site_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Site Short Name'),
+    '#default_value' => theme_get_setting('lms_short_site_name'),
+  );
+}
+
+function lms_theme_preprocess_block(&$variables) {
+  $variables['lms_short_site_name'] = theme_get_setting('lms_short_site_name');
+  //$variables['lms_short_site_name'] = 'LMS Test'; // < working | ^ not working
+}

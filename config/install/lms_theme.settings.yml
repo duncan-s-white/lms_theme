@@ -1,0 +1,18 @@
+
+logo:
+  path: 'themes/custom/ecf_lms_theme/NewECFLogo.jpg'
+  use_default: false
+favicon:
+  use_default: true
+b5_body_schema: ''
+b5_body_bg_schema: ''
+b5_navbar_schema: light
+b5_navbar_bg_schema: light
+b5_footer_schema: dark
+b5_footer_bg_schema: secondary
+b5_top_container: container
+b5_top_container_config: ''
+
+# LMS Custom settings
+
+lms_short_site_name: 'LMS'

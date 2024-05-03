@@ -1,0 +1,35 @@
+.navbar-brand {
+    max-width: 24rem;
+}
+
+#navbarSupportedContent {
+    justify-content: space-between !important;
+}
+
+.block-league-loginstatus h3 {
+    font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link.is-active {
+    color: var(--#{$prefix}nav-tabs-link-active-color);
+}
+
+main {
+    padding: 1rem 0;
+}
+
+main h1,
+main h2 {
+    margin: 1rem 0;
+}
+
+.footer-branding-block {
+    a {
+        text-decoration: none;
+        color: var(--#{$prefix}body-color);
+    }
+
+    h4 {
+        margin-left: 0.5em;
+    }
+}
